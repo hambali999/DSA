@@ -47,3 +47,7 @@ def anagram2(s1,s2):
 
     # Otherwise they're anagrams
     return True
+
+
+print(anagram2('dog','god'))
+print(anagram2('clint eastwood','old west action'))
