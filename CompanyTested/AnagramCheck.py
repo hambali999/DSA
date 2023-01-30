@@ -51,3 +51,44 @@ def anagram2(s1,s2):
 
 print(anagram2('dog','god'))
 print(anagram2('clint eastwood','old west action'))
+
+
+print("===")
+#bali ans
+def anagram3(s1, s2):
+    
+    s1 = sorted(s1.replace(" ",""))
+    s2 = sorted(s2.replace(" ",""))
+    print(s1, s2)
+
+    
+    #len must be the same anyways
+    if len(s1) != len(s2):
+        return False
+    
+    d = {} 
+    
+    for i in s1:
+        if i not in d:
+            d[i] = 1
+        else:
+            d[i] += 1
+            
+    print(d)
+            
+    for x in s2:
+        if x in d:
+            d[x] -= 1
+        else:
+            d[x] = 1
+            
+    print(d)
+            
+    for a in d:
+        if d[a] != 0:
+            return False
+        else:
+            return True
+            
+print(anagram3("dog","gods"))
+print(anagram3('clint eastwood','old west action'))
