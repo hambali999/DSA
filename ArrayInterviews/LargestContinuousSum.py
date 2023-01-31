@@ -28,7 +28,7 @@ def maximumSubarraySum(arr):
 
        for i in range(0, n):
            currSum = currSum + arr[i]
-           print(currSum)
+        #    print(currSum)
            if(currSum > maxSum):
                maxSum = currSum
            if(currSum < 0):
