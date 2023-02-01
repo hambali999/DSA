@@ -1,26 +1,48 @@
 def balance_check(s):
     # print(s)
-    d = {}
+
+    
+    closeToOpen = {')': '(', '}': '{', ']': '['}
+    stack = []
 
     for x in s:
-        if x not in d:
-            d[x] = 0
-        elif x == "[":
-            d[x] += 1
-        elif x == "]":
-            d["["] -= 1
-        elif x == "(":
-            d[x] += 1
-        elif x == ")":
-            d["("] -= 1
-
-    for k,v in d.items():
-        # print(k,v)
-        if v != 0:
-            return False
+        if x in closeToOpen:
+            if stack and stack[-1] == closeToOpen[x]:
+                stack.pop()
+            else:
+                return False
         else:
-            return True
+            stack.append(x)
+
+    if stack == []:
+        return True
+    else:
+        return False
 
 
 
-print(balance_check("[]]["))
+
+# print(balance_check("[]()(())[]]"))
+
+
+def checker(s):
+    
+    closeToOpen = {")":"(", "]":"[", "}":"{"}
+    stack = []
+
+    for x in s:
+        if x in closeToOpen:
+            if stack and stack[-1] == closeToOpen[x]:
+                stack.pop()
+            else:
+                return False
+        else:
+            stack.append(x)
+
+    if stack == []:
+        return True
+    else: 
+        return False
+
+
+print(checker("[]()(())[]"))
