@@ -45,4 +45,4 @@ def checker(s):
         return False
 
 
-print(checker("[]()(())[]"))
+print(checker("([])"))
