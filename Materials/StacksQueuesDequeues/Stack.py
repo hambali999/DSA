@@ -12,7 +12,7 @@
 # * size() returns the number of items on the stack. It needs no parameters and returns an integer.
 
 
-#LIFO, Last In, First Out
+#LIFO, Last In First Out
 
 class Stack:
 
