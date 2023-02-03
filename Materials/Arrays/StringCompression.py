@@ -17,7 +17,7 @@ def compress(s):
     print("\n")
 
 # compress('AABBCC')
-compress('AAABCCDDDDD')
+compress('AAABCCDDDDDC')
 
 
 def string_compression(input_string):
@@ -38,4 +38,4 @@ def string_compression(input_string):
     out += f'{string[i+1]}{counter}'
     print(out)
 
-string_compression('AAABCCDDDDDE')
+string_compression('AAABCCDDDDDC')

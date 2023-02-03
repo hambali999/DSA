@@ -24,3 +24,21 @@ if __name__ == '__main__':
 
 
 # https://www.techiedelight.com/find-all-permutations-string-python/
+
+print('---')
+#basically factorial
+def countPermutations(data):
+    print(len(data))
+    # 1 = 1, 2 = 2, 3=6, 4=24
+
+    # 1 = 1
+    # 2 = 1*2
+    # 3 = 1*2*3
+    # 4 = 1*2*3*4
+    cp = 1
+    for x, i in enumerate(data):
+        print(x,i)
+        cp *= int(i)
+    print(cp)
+
+countPermutations('123')
