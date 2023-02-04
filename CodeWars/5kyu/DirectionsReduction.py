@@ -13,6 +13,12 @@ def dirReduc(arr):
                 tracker.append(x)
     return tracker
 
+def dirReduc(arr):
+    dir_ = {'NORTH': 'SOUTH', 'SOUTH': 'NORTH', 'WEST': 'EAST', 'EAST': 'WEST'}
+    hold = []
+    for index, dir in enumerate(arr):
+        (hold.pop()) if hold and hold[-1] == dir_[dir] else hold.append(dir)
+    return hold
 
 class Test(unittest.TestCase):
     def test_two(self):
