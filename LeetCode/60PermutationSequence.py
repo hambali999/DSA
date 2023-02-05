@@ -19,7 +19,7 @@ def permutations(ch, curr_index=0):
 
 if __name__ == '__main__':
 
-    s = '123'
+    s = 'abc'
     permutations(list(s))
 
 
