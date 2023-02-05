@@ -29,20 +29,29 @@ def permutations(string):
     for i in range(0, len(string)):
         for p in rest:
             result.add(p[0:i] + first + p[i:])
-            print(p[0:i] + first + p[i:])
-            print('---')
+            # print(p[0:i] + first + p[i:])
+            # print('---')
     return list(result)
 
-#basically factorial, if 2 digits, 1*2, if 3 digits, 1*2*3
-def numberofpermutations(s):
-    result = 1
-    for x in range(len(s)):
-        result*=x+1
-    return result
+def permutations(string):
+    # Code Away!
+    result = set([string])
+
+    if len(string) == 2:
+        result.add(string[1] + string[0])
+
+    elif len(string) > 2:
+        for i, c in enumerate(string):
+            for s in permutations(string[:i] + string[i + 1:]):
+                result.add(c + s)
+
+    return list(result)
+
+
 
 
 
 print("start")
-print(permutations('1221'))
-print(numberofpermutations('1221'))
+print(permutations('abc'))
+
 
