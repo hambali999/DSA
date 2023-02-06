@@ -10,3 +10,5 @@ def solution(text, ending):
 
 def solution(string, ending):
     return ending in string[-len(ending):]
+
+    
