@@ -36,6 +36,7 @@ def permutations(string):
 def permutations(string):
     # Code Away!
     result = set([string])
+    print(result)
 
     if len(string) == 2:
         result.add(string[1] + string[0])
