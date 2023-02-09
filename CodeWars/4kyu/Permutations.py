@@ -43,8 +43,11 @@ def permutations(string):
 
     elif len(string) > 2:
         for i, c in enumerate(string):
+            print(i,c)
             for s in permutations(string[:i] + string[i + 1:]):
+                print(s)
                 result.add(c + s)
+            print('===')
 
     return list(result)
 
