@@ -26,8 +26,8 @@
 # [1,3,1,2] = 3
 
 # Explanation:
-# For the first case, no profit can be had because the share price never increases, so do nothing. For the second case, buy one share in each of the first two minutes, 
-# then sell both shares in the third minute.
+# For the first case, no profit can be had because the share price never increases, so do nothing. 
+# For the second case, buy one share in each of the first two minutes, then sell both shares in the third minute.
 # For the third case, buy one share in the first minute, sell one in the second minute, buy one share in the third minute, 
 # and sell one share in fourth minute to get a total profit of 3.
 
