@@ -1,8 +1,9 @@
 def capitalize(s):
     # print(s.split())
     for x in s.split():
-        # print(x)
+        print(x)
         s = s.replace(x, x.capitalize())
+        # print(x)
     return s
 
 
