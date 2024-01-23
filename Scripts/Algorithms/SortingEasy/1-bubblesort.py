@@ -1,4 +1,4 @@
-
+    
 
 def bubble(list_a):
     indexing_length = len(list_a) - 1 #SCan not apply comparision starting with last item of list (No item to right)
