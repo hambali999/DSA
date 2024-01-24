@@ -12,9 +12,18 @@
 
 
 def alphabet_position(text):
-    text = text.join("")
-    print(text)
+    result = []
+    for char in text:
+        # print(char)
+        if char.isalpha():
+            # print(char)
+            # Convert the character to its position in the alphabet
+            position = ord(char.lower()) - ord('a') + 1
+            print(str(position))
+            result.append(str(position))
 
-
+    return ' '.join(result)
+    
 
 alphabet_position("The sunset sets at twelve o' clock.")
+print(alphabet_position("The sunset sets at twelve o' clock."))
