@@ -2,7 +2,7 @@ class Node:
     def __init__(self, value):
         self.value = value
         self.next = None
-    
+
 class LinkedList:
     def __init__(self, value):
         new_node = Node(value)
@@ -14,8 +14,9 @@ class LinkedList:
         temp = self.head
         while temp is not None:
             print(temp)
+            print(temp.value)
             temp = temp.next
-        
+
     def make_empty(self):
         self.head = None
         self.tail = None
@@ -34,8 +35,8 @@ class LinkedList:
     def pop(self):
         if self.length == 0:
             return None
-        temp = self.head
         pre = self.head
+        temp = self.head
         while (temp.next):
             pre = temp
             temp = temp.next
@@ -45,7 +46,7 @@ class LinkedList:
         if self.length == 0:
             self.head = None
             self.tail = None
-        return temp # the node that got popped
+        return temp
     
     def prepend(self, value):
         new_node = Node(value)
@@ -53,13 +54,13 @@ class LinkedList:
             self.head = new_node
             self.tail = new_node
         else:
-            new_node.next = self.head 
+            temp = self.head
             self.head = new_node
+            self.head.next = temp
         self.length += 1
-        return True
-    
+
     def popfirst(self):
-        if self.length == 0:
+        if self.head is None:
             return None
         temp = self.head
         self.head = self.head.next
@@ -75,14 +76,21 @@ class LinkedList:
         temp = self.head
         for _ in range(index):
             temp = temp.next
+        print(temp.value)
         return temp
     
-
-my_linked_list = LinkedList(0)
-my_linked_list.append(1)
-my_linked_list.append(2)
+    def set_value(self, index, value):
+        temp = self.get(index)
+        if temp:
+            temp.value = value
+            return True
+        return False
+    
+my_linked_list = LinkedList(11)
 my_linked_list.append(3)
-my_linked_list.print_list()
+my_linked_list.append(23)
+my_linked_list.append(7)
 
-print("====")
-print(my_linked_list.get(2))
+my_linked_list.set_value(1,4)
+print("---")
+my_linked_list.print_list()
