@@ -1,3 +1,4 @@
+
 class Node:
     def __init__(self, value):
         self.value = value
@@ -9,7 +10,7 @@ class LinkedList:
         self.head = new_node
         self.tail = new_node
         self.length = 1
-    
+
     def print_list(self):
         if self.head is None:
             return None
@@ -17,15 +18,15 @@ class LinkedList:
         while temp is not None:
             print(temp.value)
             temp = temp.next
-    
+
     def make_empty(self):
         self.head = None
         self.tail = None
-        self.length = 0
+        self.length = 1
 
     def append(self, value):
         new_node = Node(value)
-        if self.length == 0:
+        if self.head is None:
             self.head = new_node
             self.tail = new_node
         else:
@@ -48,16 +49,11 @@ class LinkedList:
             self.head = None
             self.tail = None
         return temp
-        
 
+    
+my_linked_list = LinkedList(2)
+my_linked_list.append(4)
+my_linked_list.append(6)
+my_linked_list.pop()
+my_linked_list.print_list()
 
-
-
-
-
-my_ll = LinkedList(2)
-
-my_ll.append(4)
-my_ll.append(6)
-my_ll.pop()
-my_ll.print_list()
